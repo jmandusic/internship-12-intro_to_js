@@ -20,6 +20,9 @@ while (run == true) {
     case "3":
       run = ProgrammingLanguageActions();
       break;
+    case "4":
+      run = DeveloperFilterActions();
+      break;
     default:
       alert("Undefined input, please try again");
       break;

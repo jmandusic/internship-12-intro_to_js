@@ -4,7 +4,8 @@ function PrintMenu() {
       "0) Exit from the application \n" +
       "1) Developer actions \n" +
       "2) Companies actions \n" +
-      "3) Programming languages actions \n"
+      "3) Programming languages actions \n" +
+      "4) Developer filter \n"
   );
 }
 
@@ -40,3 +41,13 @@ function PrintProgrammingLanguageMenu() {
       "4) Delete programming language \n"
   );
 }
+
+function PrintDeveloperFilterMenu() {
+    return prompt(
+      "Select option for developer filter: \n" +
+        "0) Exit from the menu \n" +
+        "1) By type \n" +
+        "2) By programming language \n" +
+        "3) By work type \n"
+    );
+  }
