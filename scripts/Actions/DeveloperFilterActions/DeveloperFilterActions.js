@@ -11,13 +11,13 @@ function developerFilterActions() {
         run = false;
         break;
       case "1":
-        //byType();
+        filterByType();
         break;
       case "2":
-        //byProgrammingLanguage();
+        filterByProgrammingLanguage();
         break;
       case "3":
-        //byWorkStatus();
+        filterByWorkStatus();
         break;
       default:
         alert("Undefined input, please try again");

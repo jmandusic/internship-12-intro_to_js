@@ -14,7 +14,7 @@ function programmingLanguageActions() {
         createProgrammingLanguage();
         break;
       case "2":
-        //readProgrammingLanguage();
+        readProgrammingLanguage();
         break;
       case "3":
         updateProgrammingLanguage();

@@ -50,7 +50,7 @@ function printDeveloperFilterMenu() {
       "0) Exit from the menu \n" +
       "1) By type \n" +
       "2) By programming language \n" +
-      "3) By work type \n"
+      "3) By work status \n"
   );
 }
 
@@ -118,7 +118,9 @@ function printCompanies(companies) {
 }
 
 function printProgrammingLanguages(programmingLanguages) {
-  let programmingLanguagesNames = programmingLanguages.map((programmingLanguage) => programmingLanguage.name);
+  let programmingLanguagesNames = programmingLanguages.map(
+    (programmingLanguage) => programmingLanguage.name
+  );
   let programmingLanguagesNamesString = programmingLanguagesNames.join("\n");
   return prompt(
     "Select programming language: \n" +
@@ -135,5 +137,61 @@ function printProgrammingLanguagesNames(programmingLanguages) {
   let programmingLanguagesNamesString = programmingLanguagesNames.join("\n");
   return prompt(
     "Select programming language: \n" + programmingLanguagesNamesString
+  );
+}
+
+function printProgrammingLanguage(programmingLanguageName, programmingLanguages) {
+  programmingLanguages.forEach(language => {
+    if (language.name === programmingLanguageName) {
+      alert(
+        " Programming language id: " +
+          language.id +
+          "\n Name: " +
+          programmingLanguageName
+      );
+    }
+  });
+}
+
+function printDevelopersByType(backend, frontend, fullstack) {
+  let backendToString = backend.join(", ");
+  let frontendToString = frontend.join(", ");
+  let fullstackToString = fullstack.join(", ");
+
+  alert(
+    "BACKEND DEVELOPERS: \n" +
+      backendToString +
+      "\n-------------------------------" +
+      "\nFRONTEND DEVELOPERS: \n" +
+      frontendToString +
+      "\n-------------------------------" +
+      "\nFULSTACK DEVELOPERS: \n" +
+      fullstackToString
+  );
+}
+
+function printDevelopersByWorkStatus(employed, unemployed, freelancers) {
+  let employedToString = employed.join(", ");
+  let unemployedToString = unemployed.join(", ");
+  let freelancersToString = freelancers.join(", ");
+
+  alert(
+    "EMPLOYED DEVELOPERS: \n" +
+      employedToString +
+      "\n-------------------------------" +
+      "\nUNEMPLOYED DEVELOPERS: \n" +
+      unemployedToString +
+      "\n-------------------------------" +
+      "\nFREELANCERS: \n" +
+      freelancersToString
+  );
+}
+
+function printDevelopersByProgrammingLanguage(developers, programmingLanguage) {
+  let developersNames = developers.map((developer) => developer.name);
+  let developersNamesToString = developersNames.join(", ");
+
+  alert(
+    "Developers using " + programmingLanguage + ":\n" + developersNamesToString
   );
 }

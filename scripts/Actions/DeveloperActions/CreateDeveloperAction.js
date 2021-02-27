@@ -8,7 +8,7 @@ function createDeveloper() {
 
   let newDeveloperWorkStatus = workStatus();
   let newDeveloperWorksAt = "unemployed";
-  if (newDeveloperWorkStatus === workStatusEnum.EMPLPOYED) {
+  if (newDeveloperWorkStatus === workStatusEnum.EMPLOYED) {
     newDeveloperWorksAt = selectWork();
   }
 
@@ -34,7 +34,7 @@ function workStatus() {
     let option = printDeveloperWorkStatus();
     switch (option) {
       case "1":
-        return workStatusEnum.EMPLPOYED;
+        return workStatusEnum.EMPLOYED;
       case "2":
         return workStatusEnum.UNEMPLOYED;
       case "3":

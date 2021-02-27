@@ -24,13 +24,13 @@ function updateDeveloper() {
         break;
       case "2":
         developer.workStatus = workStatus();
-        if (developer.workStatus === workStatusEnum.EMPLPOYED) {
+        if (developer.workStatus === workStatusEnum.EMPLOYED) {
           developer.worksAt = selectWork();
         }
         isOptionDefined = true;
         break;
       case "3":
-        if (developer.workStatus === workStatusEnum.EMPLPOYED) {
+        if (developer.workStatus === workStatusEnum.EMPLOYED) {
           developer.worksAt = selectWork();
         } else {
           alert(developer.name + " is not employed");

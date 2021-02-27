@@ -8,5 +8,4 @@ function readDeveloper() {
   }
 
   printDeveloper(developers, developerName);
-
 }

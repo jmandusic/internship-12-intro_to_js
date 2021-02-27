@@ -4,7 +4,7 @@ const developers = [
   {
     id: 1,
     name: "Ante Antic",
-    workStatus: workStatusEnum.EMPLPOYED,
+    workStatus: workStatusEnum.EMPLOYED,
     worksAt: "Facebook",
     type: developerTypeEnum.FRONTEND,
     knowableProgrammingLanguages: ["JavaScript"],
@@ -20,7 +20,7 @@ const developers = [
   {
     id: 3,
     name: "Luka Lukic",
-    workStatus: workStatusEnum.EMPLPOYED,
+    workStatus: workStatusEnum.EMPLOYED,
     worksAt: "Rimac Automobili",
     type: developerTypeEnum.BACKEND,
     knowableProgrammingLanguages: ["C#", "Python", "Java"],

@@ -2,7 +2,7 @@
 
 const workStatusEnum = Object.freeze({
   FREELANCER: "FREELANCER",
-  EMPLPOYED: "EMPLOYED",
+  EMPLOYED: "EMPLOYED",
   UNEMPLOYED: "UNEMPLOYED",
 });
 
