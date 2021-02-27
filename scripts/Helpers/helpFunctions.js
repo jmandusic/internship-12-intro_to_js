@@ -48,3 +48,17 @@ function checkIfLanguageExists(language) {
   return true;
 }
 
+//function removeDeveloperFromCompany(developer, compamies) {}
+
+function removeProgrammingLanguageFromDeveloper(programmingLanguageName, developers) {
+  let developersProgrammingLanguages = developers.map(developer => developer.knowableProgrammingLanguages);
+
+  developersProgrammingLanguages.forEach(array => {
+    for (let index = 0; index < array.length; index++) {
+      if (array[index] === programmingLanguageName) {
+        array.splice(index, 1);
+      }
+    }
+  });
+}
+

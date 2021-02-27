@@ -78,7 +78,7 @@ function printDeveloperUpdateMenu() {
       "1) Name \n" +
       "2) Work status \n" +
       "3) Works at \n" +
-      "4) Type \n" + 
+      "4) Type \n" +
       "5) Knowable languages"
   );
 }
@@ -125,5 +125,15 @@ function printProgrammingLanguages(programmingLanguages) {
       programmingLanguagesNamesString +
       "\n" +
       "To input more languages split them with whitespace ” ” \n For example: ”Java C# C++” "
+  );
+}
+
+function printProgrammingLanguagesNames(programmingLanguages) {
+  let programmingLanguagesNames = programmingLanguages.map(
+    (programmingLanguage) => programmingLanguage.name
+  );
+  let programmingLanguagesNamesString = programmingLanguagesNames.join("\n");
+  return prompt(
+    "Select programming language: \n" + programmingLanguagesNamesString
   );
 }

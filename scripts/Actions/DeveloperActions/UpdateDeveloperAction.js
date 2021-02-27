@@ -51,5 +51,6 @@ function updateDeveloper() {
     }
   }
 
+  sortObjectsArray(developers);
   printDeveloper(developers, developer.name);
 }

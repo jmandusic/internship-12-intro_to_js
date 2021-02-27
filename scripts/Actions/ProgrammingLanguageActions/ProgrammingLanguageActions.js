@@ -11,16 +11,16 @@ function programmingLanguageActions() {
         run = false;
         break;
       case "1":
-        //createProgrammingLanguage();
+        createProgrammingLanguage();
         break;
       case "2":
         //readProgrammingLanguage();
         break;
       case "3":
-        //updateProgrammingLanguage();
+        updateProgrammingLanguage();
         break;
       case "4":
-        //deleteProgrammingLanguage();
+        deleteProgrammingLanguage();
         break;
       default:
         alert("Undefined input, please try again");
