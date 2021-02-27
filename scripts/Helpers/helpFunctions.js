@@ -48,7 +48,30 @@ function checkIfLanguageExists(language) {
   return true;
 }
 
-//function removeDeveloperFromCompany(developer, compamies) {}
+function removeDeveloperFromCompany(developerId, companyName, companies) {
+  let company = companies.filter(company => company.name == companyName);
+
+  for (let index = 0; index < company[0].employees.length; index++) {
+    if (company[0].employees[index] === developerId) {
+      company[0].employees.splice(index, 1);
+    }
+  }
+}
+
+function changeDevelopersWorkStatus(companyToRemove, developers) {
+  let developersInCompanyToRemove = developers.filter(developer => developer.worksAt === companyToRemove.name);
+  developersInCompanyToRemove.forEach(developer => {
+    developer.workStatus = workStatusEnum.UNEMPLOYED;
+    developer.worksAt = "unemployed";
+  });
+}
+
+function changeDevelopersWorksAt(companyName, newCompanyName, developers) {
+  let developersInCompanyToUpdate = developers.filter(developer => developer.worksAt === companyName);
+  developersInCompanyToUpdate.forEach(developer => {
+    developer.worksAt = newCompanyName;
+  });
+}
 
 function removeProgrammingLanguageFromDeveloper(programmingLanguageName, developers) {
   let developersProgrammingLanguages = developers.map(developer => developer.knowableProgrammingLanguages);

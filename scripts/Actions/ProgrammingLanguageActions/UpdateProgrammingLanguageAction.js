@@ -9,15 +9,15 @@ function updateProgrammingLanguage() {
   }
 
   let programmingLanguage = undefined;
-  programmingLanguages.forEach((element) => {
-    if (element.name === programmingLanguageName) {
-      programmingLanguage = element;
+  programmingLanguages.forEach((language) => {
+    if (language.name === programmingLanguageName) {
+      programmingLanguage = language;
     }
   });
 
   let alreadyExists = true;
   while (alreadyExists) {
-    programmingLanguage.name = prompt("Programming language name: ");
+    programmingLanguage.name = prompt("Update programming language name: ");
     if (!programmingLanguagesNames.includes(programmingLanguage.name)) {
       alreadyExists = false;
     } else {

@@ -117,6 +117,29 @@ function printCompanies(companies) {
   return prompt("Select company: \n" + companiesNamesString);
 }
 
+function printCompany(companyName, companies, developers) {
+  let companyToRead = companies.filter(company => company.name === companyName);
+  let companyEmployees = [];
+
+  companyToRead[0].employees.forEach(developerId => {
+    developers.forEach(developer => {
+      if (developerId === developer.id) {
+        companyEmployees.push(developer.name);
+      }
+    });
+  });
+
+  companyEmployees = companyEmployees.join(", ");
+
+  alert(
+    " Company id: " +
+      companyToRead[0].id +
+      "\n Name: " +
+      companyToRead[0].name +
+      "\n Employees: " + companyEmployees      
+  );
+}
+
 function printProgrammingLanguages(programmingLanguages) {
   let programmingLanguagesNames = programmingLanguages.map(
     (programmingLanguage) => programmingLanguage.name

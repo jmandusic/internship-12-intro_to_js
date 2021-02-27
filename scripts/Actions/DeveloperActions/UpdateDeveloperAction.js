@@ -25,13 +25,16 @@ function updateDeveloper() {
       case "2":
         developer.workStatus = workStatus();
         if (developer.workStatus === workStatusEnum.EMPLOYED) {
-          developer.worksAt = selectWork();
+          developer.worksAt = selectWork(developer.id);
+        } else {
+          developer.worksAt = "unemployed";
         }
         isOptionDefined = true;
         break;
       case "3":
         if (developer.workStatus === workStatusEnum.EMPLOYED) {
-          developer.worksAt = selectWork();
+          removeDeveloperFromCompany(developer.id, developer.worksAt, companies);
+          developer.worksAt = selectWork(developer.id);                  
         } else {
           alert(developer.name + " is not employed");
         }

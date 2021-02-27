@@ -11,16 +11,16 @@ function companyActions() {
         run = false;
         break;
       case "1":
-        //createCompany();
+        createCompany();
         break;
       case "2":
-        //readCompany();
+        readCompany();
         break;
       case "3":
-        //updateCompany();
+        updateCompany();
         break;
       case "4":
-        //deleteCompany();
+        deleteCompany();
         break;
       default:
         alert("Undefined input, please try again");

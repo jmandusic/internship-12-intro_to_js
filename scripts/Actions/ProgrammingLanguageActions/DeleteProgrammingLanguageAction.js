@@ -9,9 +9,9 @@ function deleteProgrammingLanguage() {
   }
 
   let programmingLanguageToRemove = undefined;
-  programmingLanguages.forEach((element) => {
-    if (element.name === programmingLanguageName) {
-      programmingLanguageToRemove = element;
+  programmingLanguages.forEach((language) => {
+    if (language.name === programmingLanguageName) {
+      programmingLanguageToRemove = language;
     }
   });
 

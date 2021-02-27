@@ -2,14 +2,22 @@
 
 function createDeveloper() {
   let newDeveloperId = autoIncrement(developers);
-  let newDeveloperFullName = formatDeveloperName(
-    prompt("Developer full name: ")
-  );
+
+  let newDeveloperFullName = undefined;
+  let alreadyExists = true;
+  while (alreadyExists) {
+    newDeveloperFullName = formatDeveloperName(prompt("Developer full name: "));
+    if (!developers.map((developer) => developer.name).includes(newDeveloperFullName)) {
+      alreadyExists = false;
+    } else {
+      alert("This developer name already exists, try again");
+    }
+  }
 
   let newDeveloperWorkStatus = workStatus();
   let newDeveloperWorksAt = "unemployed";
   if (newDeveloperWorkStatus === workStatusEnum.EMPLOYED) {
-    newDeveloperWorksAt = selectWork();
+    newDeveloperWorksAt = selectWork(newDeveloperId);
   }
 
   let newDeveloperType = developerType();
@@ -46,11 +54,13 @@ function workStatus() {
   }
 }
 
-function selectWork() {
+function selectWork(developerId) {
   let isWorkDefined = false;
   while (!isWorkDefined) {
     let worksAt = printCompanies(companies);
+    let jobCompany = companies.filter(company => company.name === worksAt);
     if (companies.map((company) => company.name).includes(worksAt)) {
+      jobCompany[0].employees.push(developerId);
       return worksAt;
     } else {
       alert("Undefined input, please try again");
@@ -81,8 +91,14 @@ function getKnowableProgrammingLanguages() {
   while (!isLanguageDefined) {
     let arrayOfLanguages = printProgrammingLanguages(programmingLanguages);
     newDeveloperProgrammingLanguages = arrayOfLanguages.split(" ");
-    for (let index = 0; index < newDeveloperProgrammingLanguages.length;index++) {
-      let check = checkIfLanguageExists(newDeveloperProgrammingLanguages[index]);
+    for (
+      let index = 0;
+      index < newDeveloperProgrammingLanguages.length;
+      index++
+    ) {
+      let check = checkIfLanguageExists(
+        newDeveloperProgrammingLanguages[index]
+      );
       if (check) {
         isLanguageDefined = true;
       } else {

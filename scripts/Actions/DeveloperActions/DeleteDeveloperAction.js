@@ -17,6 +17,7 @@ function deleteDeveloper() {
   for (let index = 0; index < developers.length; index++) {
     if (developers[index] === developerToRemove && permissionToContinue()) {
       developers.splice(index, 1);
+      removeDeveloperFromCompany(developerToRemove.id, developerToRemove.worksAt, companies);
       alert("Developer succesfully removed");
       return;
     }
