@@ -1,4 +1,6 @@
-function PrintMenu() {
+"use strict";
+
+function printMenu() {
   return prompt(
     "Select option: \n" +
       "0) Exit from the application \n" +
@@ -9,7 +11,7 @@ function PrintMenu() {
   );
 }
 
-function PrintDeveloperMenu() {
+function printDeveloperMenu() {
   return prompt(
     "Select option for developers: \n" +
       "0) Exit from the menu \n" +
@@ -20,7 +22,7 @@ function PrintDeveloperMenu() {
   );
 }
 
-function PrintCompanyMenu() {
+function printCompanyMenu() {
   return prompt(
     "Select option for companies: \n" +
       "0) Exit from the menu \n" +
@@ -31,7 +33,7 @@ function PrintCompanyMenu() {
   );
 }
 
-function PrintProgrammingLanguageMenu() {
+function printProgrammingLanguageMenu() {
   return prompt(
     "Select option for programming languages: \n" +
       "0) Exit from the menu \n" +
@@ -42,12 +44,86 @@ function PrintProgrammingLanguageMenu() {
   );
 }
 
-function PrintDeveloperFilterMenu() {
-    return prompt(
-      "Select option for developer filter: \n" +
-        "0) Exit from the menu \n" +
-        "1) By type \n" +
-        "2) By programming language \n" +
-        "3) By work type \n"
-    );
-  }
+function printDeveloperFilterMenu() {
+  return prompt(
+    "Select option for developer filter: \n" +
+      "0) Exit from the menu \n" +
+      "1) By type \n" +
+      "2) By programming language \n" +
+      "3) By work type \n"
+  );
+}
+
+function printDeveloperWorkStatus() {
+  return prompt(
+    "Select option for developer work status: \n" +
+      "1) Employed \n" +
+      "2) Unemployed \n" +
+      "3) Freelancer \n"
+  );
+}
+
+function printDeveloperTypes() {
+  return prompt(
+    "Select option for developer type: \n" +
+      "1) Backend \n" +
+      "2) Frontend \n" +
+      "3) Fullstack \n"
+  );
+}
+
+function printDeveloperUpdateMenu() {
+  return prompt(
+    "Select option for developer update: \n" +
+      "1) Name \n" +
+      "2) Work status \n" +
+      "3) Works at \n" +
+      "4) Type \n" + 
+      "5) Knowable languages"
+  );
+}
+
+function printDeveloper(developers, developerName) {
+  developers.forEach((developer) => {
+    if (developer.name === developerName) {
+      let knowableLanguagesString = developer.knowableProgrammingLanguages.join(",");
+      alert(
+        " Developer id: " +
+          developer.id +
+          "\n Name: " +
+          developer.name +
+          "\n Work status: " +
+          developer.workStatus +
+          "\n Works at: " +
+          developer.worksAt +
+          "\n Type: " +
+          developer.type +
+          "\n Knowable languages: " +
+          knowableLanguagesString
+      );
+    }
+  });
+}
+
+function printDeveloperNames(developers) {
+  let developersNames = developers.map((developer) => developer.name);
+  let developersNamesString = developersNames.join("\n");
+  return prompt("Select developer name: \n" + developersNamesString);
+}
+
+function printCompanies(companies) {
+  let companiesNames = companies.map((company) => company.name);
+  let companiesNamesString = companiesNames.join("\n");
+  return prompt("Select company: \n" + companiesNamesString);
+}
+
+function printProgrammingLanguages(programmingLanguages) {
+  let programmingLanguagesNames = programmingLanguages.map((programmingLanguage) => programmingLanguage.name);
+  let programmingLanguagesNamesString = programmingLanguagesNames.join("\n");
+  return prompt(
+    "Select programming language: \n" +
+      programmingLanguagesNamesString +
+      "\n" +
+      "To input more languages split them with whitespace ” ” \n For example: ”Java C# C++” "
+  );
+}

@@ -1,3 +1,5 @@
+"use strict";
+
 const workStatusEnum = Object.freeze({
   FREELANCER: "FREELANCER",
   EMPLPOYED: "EMPLOYED",

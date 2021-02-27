@@ -1,7 +1,9 @@
-function ProgrammingLanguageActions() {
+"use strict";
+
+function programmingLanguageActions() {
   let run = true;
   while (run == true) {
-    let option = PrintProgrammingLanguageMenu();
+    let option = printProgrammingLanguageMenu();
     switch (option) {
       case null:
         return false;
@@ -9,16 +11,16 @@ function ProgrammingLanguageActions() {
         run = false;
         break;
       case "1":
-        //CreateProgrammingLanguage();
+        //createProgrammingLanguage();
         break;
       case "2":
-        //ReadProgrammingLanguage();
+        //readProgrammingLanguage();
         break;
       case "3":
-        //UpdateProgrammingLanguage();
+        //updateProgrammingLanguage();
         break;
       case "4":
-        //DeleteProgrammingLanguage();
+        //deleteProgrammingLanguage();
         break;
       default:
         alert("Undefined input, please try again");

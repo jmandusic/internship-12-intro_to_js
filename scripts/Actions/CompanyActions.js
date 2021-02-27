@@ -1,7 +1,9 @@
-function CompanyActions() {
+"use strict";
+
+function companyActions() {
   let run = true;
   while (run == true) {
-    let option = PrintCompanyMenu();
+    let option = printCompanyMenu();
     switch (option) {
       case null:
         return false;
@@ -9,16 +11,16 @@ function CompanyActions() {
         run = false;
         break;
       case "1":
-        //CreateCompany();
+        //createCompany();
         break;
       case "2":
-        //ReadCompany();
+        //readCompany();
         break;
       case "3":
-        //UpdateCompany();
+        //updateCompany();
         break;
       case "4":
-        //DeleteCompany();
+        //deleteCompany();
         break;
       default:
         alert("Undefined input, please try again");

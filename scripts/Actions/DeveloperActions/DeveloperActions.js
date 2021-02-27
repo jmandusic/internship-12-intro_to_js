@@ -1,7 +1,9 @@
-function DeveloperActions() {
+"use strict";
+
+function developerActions() {
   let run = true;
   while (run == true) {
-    let option = PrintDeveloperMenu();
+    let option = printDeveloperMenu();
     switch (option) {
       case null:
         return false;
@@ -9,16 +11,16 @@ function DeveloperActions() {
         run = false;
         break;
       case "1":
-        //CreateDeveloper();
+        createDeveloper();
         break;
       case "2":
-        //ReadDeveloper();
+        readDeveloper();
         break;
       case "3":
-        //UpdateDeveloper();
+        updateDeveloper();
         break;
       case "4":
-        //DeleteDeveloper();
+        deleteDeveloper();
         break;
       default:
         alert("Undefined input, please try again");

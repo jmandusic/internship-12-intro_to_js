@@ -1,132 +1,88 @@
+"use strict";
+
 const developers = [
   {
-    id: undefined,
-    fullName: "Luka Lukic",
-    workStatus: workStatusEnum.EMPLPOYED,
-    worksAt: "Rimac Automobili",
-    type: developerTypeEnum.BACKEND,
-    knowableProgrammingLanguages: [
-      {
-        id: undefined,
-        name: "C#",
-      },
-      {
-        id: undefined,
-        name: "Python",
-      },
-      {
-        id: undefined,
-        name: "Java",
-      },
-    ],
-  },
-  {
-    id: undefined,
-    fullName: "Josip Josipic",
-    workStatus: workStatusEnum.FREELANCER,
-    worksAt: null,
-    type: developerTypeEnum.FULLSTACK,
-    knowableProgrammingLanguages: [
-      {
-        id: undefined,
-        name: "C#",
-      },
-      {
-        id: undefined,
-        name: "Python",
-      },
-      {
-        id: undefined,
-        name: "JavaScript",
-      },
-      {
-        id: undefined,
-        name: "C++",
-      },
-    ],
-  },
-  {
-    id: undefined,
-    fullName: "Ante Antic",
+    id: 1,
+    name: "Ante Antic",
     workStatus: workStatusEnum.EMPLPOYED,
     worksAt: "Facebook",
     type: developerTypeEnum.FRONTEND,
-    knowableProgrammingLanguages: [
-      {
-        id: undefined,
-        name: "JavaScript",
-      },
-    ],
+    knowableProgrammingLanguages: ["JavaScript"],
   },
   {
-    id: undefined,
-    fullName: "Vinko Vinkic",
+    id: 2,
+    name: "Josip Josipic",
+    workStatus: workStatusEnum.FREELANCER,
+    worksAt: null,
+    type: developerTypeEnum.FULLSTACK,
+    knowableProgrammingLanguages: ["C#", "JavaScript", "C++", "Python"],
+  },
+  {
+    id: 3,
+    name: "Luka Lukic",
+    workStatus: workStatusEnum.EMPLPOYED,
+    worksAt: "Rimac Automobili",
+    type: developerTypeEnum.BACKEND,
+    knowableProgrammingLanguages: ["C#", "Python", "Java"],
+  },
+  {
+    id: 4,
+    name: "Vinko Vinkic",
     workStatus: workStatusEnum.UNEMPLOYED,
     worksAt: null,
     type: developerTypeEnum.FULLSTACK,
-    knowableProgrammingLanguages: [
-      {
-        id: undefined,
-        name: "C#",
-      },
-      {
-        id: undefined,
-        name: "Python",
-      },
-      {
-        id: undefined,
-        name: "JavaScript",
-      },
-    ],
+    knowableProgrammingLanguages: ["C#", "JavaScript", "Python"],
   },
 ];
 
-autoIncrement(developers);
+sortObjectsArray(developers);
 
 const companies = [
   {
-    id: undefined,
+    id: 1,
     name: "Rimac Automobili",
+    employees: [3],
   },
   {
-    id: undefined,
+    id: 2,
     name: "Ericsson Nikola Tesla",
+    employees: [],
   },
   {
-    id: undefined,
+    id: 3,
     name: "Hattrick Developers",
+    employees: [],
   },
   {
-    id: undefined,
+    id: 4,
     name: "Facebook",
+    employees: [1],
   },
 ];
 
-autoIncrement(companies);
+sortObjectsArray(companies);
 
 const programmingLanguages = [
   {
-    id: undefined,
+    id: 1,
     name: "JavaScript",
   },
   {
-    id: undefined,
+    id: 2,
     name: "C#",
   },
   {
-    id: undefined,
+    id: 3,
     name: "Python",
   },
   {
-    id: undefined,
+    id: 4,
     name: "C++",
   },
   {
-    id: undefined,
+    id: 5,
     name: "Java",
   },
 ];
 
-autoIncrement(programmingLanguages);
-
-
+sortObjectsArray(programmingLanguages);
