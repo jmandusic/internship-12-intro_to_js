@@ -19,7 +19,18 @@ function updateDeveloper() {
     let option = printDeveloperUpdateMenu();
     switch (option) {
       case "1":
-        developer.name = formatDeveloperName(prompt("Developer new name: "));
+        let updateDeveloperName = "";
+
+        let alreadyExists = true;
+        while (alreadyExists) {
+          updateDeveloperName = formatDeveloperName(prompt("Developer updated name: "));;
+          if (!developers.map((developer) => developer.name).includes(updateDeveloperName)) {
+            alreadyExists = false;
+          } else {
+            alert("This developer name already exists, try again");
+          }
+        }
+        developer.name = updateDeveloperName;
         isOptionDefined = true;
         break;
       case "2":
